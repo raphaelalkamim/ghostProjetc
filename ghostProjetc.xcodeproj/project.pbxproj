@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0037079284FEFB100FA5B4F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0037078284FEFB100FA5B4F /* HistoryViewController.swift */; };
 		B09AC1B9284E99A100338043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1B8284E99A100338043 /* AppDelegate.swift */; };
 		B09AC1BB284E99A100338043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1BA284E99A100338043 /* ViewController.swift */; };
 		B09AC1BD284E99A100338043 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1BC284E99A100338043 /* Experience.rcproject */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0037078284FEFB100FA5B4F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B09AC1B5284E99A100338043 /* ghostProjetc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ghostProjetc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09AC1B8284E99A100338043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B09AC1BA284E99A100338043 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				B09AC1CB284E99F300338043 /* HomeViewController.swift */,
 				B09AC1CD284E9B0C00338043 /* ARViewController.swift */,
+				B0037078284FEFB100FA5B4F /* HistoryViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				B09AC1CC284E99F300338043 /* HomeViewController.swift in Sources */,
 				B09AC1B9284E99A100338043 /* AppDelegate.swift in Sources */,
 				B09AC1BD284E99A100338043 /* Experience.rcproject in Sources */,
+				B0037079284FEFB100FA5B4F /* HistoryViewController.swift in Sources */,
 				B09AC1CE284E9B0C00338043 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
