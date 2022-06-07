@@ -8,10 +8,12 @@
 import Foundation
 import RealityKit
 import ARKit
+import AVFoundation
 
 class ARViewController: ViewController {
     
     @IBOutlet var arView: ARView!
+    var soundEffect: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,12 +80,25 @@ extension ARViewController: ARSessionDelegate {
 
                     if let object = scene.findEntity(named: meme.imageNameMeme) {
                         entity.addChild(object)
+                        playSound()
                         arView.scene.addAnchor(entity)
                     }
 
                 }
 
             }
+        }
+    }
+    
+    func playSound() {
+        let path = Bundle.main.path(forResource: "sound effect.mp3", ofType: nil)
+        let url = URL(fileURLWithPath: path!)
+        
+        do{
+            soundEffect = try AVAudioPlayer(contentsOf: url)
+            soundEffect?.play()
+        } catch {
+            fatalError("Couldn't load file")
         }
     }
 }
