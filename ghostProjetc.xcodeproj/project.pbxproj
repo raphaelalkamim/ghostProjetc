@@ -17,6 +17,7 @@
 		B09AC1CE284E9B0C00338043 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1CD284E9B0C00338043 /* ARViewController.swift */; };
 		B09AC1D3284FBCFE00338043 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1D2284FBCFE00338043 /* MemeModel.swift */; };
 		B26A1086284FDFCE0033E5DC /* sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B26A1085284FDFCE0033E5DC /* sound effect.mp3 */; };
+		B26A1088284FEECF0033E5DC /* yes_sir.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B26A1087284FEECE0033E5DC /* yes_sir.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B09AC1CD284E9B0C00338043 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		B09AC1D2284FBCFE00338043 /* MemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 		B26A1085284FDFCE0033E5DC /* sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "sound effect.mp3"; path = "../../../../Desktop/sound effect.mp3"; sourceTree = "<group>"; };
+		B26A1087284FEECE0033E5DC /* yes_sir.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = yes_sir.mp3; path = ../../../../Desktop/yes_sir.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				B26A1085284FDFCE0033E5DC /* sound effect.mp3 */,
+				B26A1087284FEECE0033E5DC /* yes_sir.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				B26A1086284FDFCE0033E5DC /* sound effect.mp3 in Resources */,
 				B09AC1C5284E99A300338043 /* LaunchScreen.storyboard in Resources */,
+				B26A1088284FEECF0033E5DC /* yes_sir.mp3 in Resources */,
 				B09AC1C2284E99A300338043 /* Assets.xcassets in Resources */,
 				B09AC1C0284E99A100338043 /* Main.storyboard in Resources */,
 			);
