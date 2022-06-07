@@ -23,7 +23,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="134"/>
+            <point key="canvasLocation" x="723" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Wf-oW-kMy">
+            <objects>
+                <viewController id="d8y-sx-arG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dKp-rv-wgM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="SDF-jz-dUN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXTASHDASJDAHSDKJAHSDKJAHSDJKAHSJKDHASDJKHASDJKHA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-Gi-AeX">
+                                <rect key="frame" x="15" y="150" width="384" height="543"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEp-BB-KO1">
+                                <rect key="frame" x="101" y="704" width="212" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="OFl-3u-xUw"/>
+                                    <constraint firstAttribute="width" constant="212" id="dT0-be-U4Y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="StartButton"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Id0-hE-T1X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cri-Hw-2yu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZEp-BB-KO1" firstAttribute="leading" secondItem="cri-Hw-2yu" secondAttribute="leading" constant="101" id="6aj-p5-Bsh"/>
+                            <constraint firstItem="SDF-jz-dUN" firstAttribute="bottom" secondItem="cri-Hw-2yu" secondAttribute="bottom" constant="34" id="8PA-DZ-VL9"/>
+                            <constraint firstItem="ZEp-BB-KO1" firstAttribute="leading" secondItem="cri-Hw-2yu" secondAttribute="leading" constant="101" id="UcP-7v-uwS"/>
+                            <constraint firstItem="SDF-jz-dUN" firstAttribute="trailing" secondItem="cri-Hw-2yu" secondAttribute="trailing" id="bo3-7W-DN0"/>
+                            <constraint firstItem="SDF-jz-dUN" firstAttribute="leading" secondItem="cri-Hw-2yu" secondAttribute="leading" id="ehb-Dt-2z5"/>
+                            <constraint firstItem="cri-Hw-2yu" firstAttribute="bottom" secondItem="ZEp-BB-KO1" secondAttribute="bottom" constant="40" id="fYs-Mv-MG0"/>
+                            <constraint firstItem="cri-Hw-2yu" firstAttribute="bottom" secondItem="ZEp-BB-KO1" secondAttribute="bottom" constant="40" id="oLI-XI-V20"/>
+                            <constraint firstItem="cri-Hw-2yu" firstAttribute="trailing" secondItem="ZEp-BB-KO1" secondAttribute="trailing" constant="101" id="s1I-ur-U5c"/>
+                            <constraint firstItem="cri-Hw-2yu" firstAttribute="trailing" secondItem="ZEp-BB-KO1" secondAttribute="trailing" constant="101" id="x5l-yc-35s"/>
+                            <constraint firstItem="SDF-jz-dUN" firstAttribute="top" secondItem="dKp-rv-wgM" secondAttribute="top" id="zrO-Uv-QQL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KvF-hw-ztH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eno-PZ-9dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="133.92857142857142"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="zws-Q7-PNE">
@@ -33,26 +87,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-wW-MOn">
-                                <rect key="frame" x="174" y="433" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-wa-umI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-wW-MOn">
+                                <rect key="frame" x="118" y="581" width="181" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="AfT-yC-Tgm"/>
+                                    <constraint firstAttribute="height" constant="181" id="RGy-5Z-vwR"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="PlayButton"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="W1s-7M-5Bz"/>
+                                    <segue destination="d8y-sx-arG" kind="show" id="8OI-YY-mlZ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoHome" translatesAutoresizingMaskIntoConstraints="NO" id="11Q-TJ-KOX">
+                                <rect key="frame" x="20" y="94" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="jXF-Zz-Dd6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mCJ-Ge-Mx4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wD2-wW-MOn" firstAttribute="leading" secondItem="mCJ-Ge-Mx4" secondAttribute="leading" constant="118" id="316-8g-4Zb"/>
+                            <constraint firstItem="cnE-wa-umI" firstAttribute="leading" secondItem="mCJ-Ge-Mx4" secondAttribute="leading" id="4Xi-a5-Lvp"/>
+                            <constraint firstItem="11Q-TJ-KOX" firstAttribute="leading" secondItem="mCJ-Ge-Mx4" secondAttribute="leading" constant="20" id="6JY-Xg-oA9"/>
+                            <constraint firstItem="cnE-wa-umI" firstAttribute="top" secondItem="0kX-qP-DQK" secondAttribute="top" id="D4T-2F-sfm"/>
+                            <constraint firstItem="mCJ-Ge-Mx4" firstAttribute="bottom" secondItem="wD2-wW-MOn" secondAttribute="bottom" constant="100" id="FSw-ft-l06"/>
+                            <constraint firstItem="cnE-wa-umI" firstAttribute="trailing" secondItem="mCJ-Ge-Mx4" secondAttribute="trailing" id="R10-rj-aRk"/>
+                            <constraint firstItem="mCJ-Ge-Mx4" firstAttribute="trailing" secondItem="wD2-wW-MOn" secondAttribute="trailing" constant="115" id="RLp-XX-gQn"/>
+                            <constraint firstItem="mCJ-Ge-Mx4" firstAttribute="trailing" secondItem="11Q-TJ-KOX" secondAttribute="trailing" constant="20" id="YsA-Da-tIX"/>
+                            <constraint firstItem="11Q-TJ-KOX" firstAttribute="top" secondItem="mCJ-Ge-Mx4" secondAttribute="top" constant="50" id="cTz-7V-ccd"/>
+                            <constraint firstAttribute="bottom" secondItem="cnE-wa-umI" secondAttribute="bottom" id="ppG-cA-LgB"/>
+                            <constraint firstItem="mCJ-Ge-Mx4" firstAttribute="trailing" secondItem="11Q-TJ-KOX" secondAttribute="trailing" constant="20" id="vYe-fR-4zU"/>
+                            <constraint firstItem="11Q-TJ-KOX" firstAttribute="leading" secondItem="mCJ-Ge-Mx4" secondAttribute="leading" constant="20" id="yL8-en-79R"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbV-ZX-wCy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-696" y="134"/>
+            <point key="canvasLocation" x="-697.10144927536237" y="133.92857142857142"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BackgroundImage" width="800" height="1191"/>
+        <image name="LogoHome" width="744" height="449"/>
+        <image name="PlayButton" width="362" height="362"/>
+        <image name="StartButton" width="492" height="234"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
