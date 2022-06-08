@@ -12,6 +12,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playSound(file: "opera.mp3")
     }
+    
+    @IBAction func startGameAction(_ sender: Any) {
+        stopSound()
+    }
+    
 }

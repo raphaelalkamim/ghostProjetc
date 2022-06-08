@@ -1,11 +1,12 @@
 //
-//  ARViewController.swift
+//  MemesList.swift
 //  ghostProjetc
 //
-//  Created by Raphael Alkamim on 06/06/22.
+//  Created by Raphael Alkamim on 08/06/22.
 //
 
 import Foundation
+<<<<<<< HEAD:ghostProjetc/ViewController/ARViewController.swift
 import RealityKit
 import ARKit
 import AVFoundation
@@ -28,6 +29,8 @@ class ARViewController: ViewController {
         
     }
 }
+=======
+>>>>>>> main:ghostProjetc/MemesList.swift
 
 let memes: [MemeModel] = [
     MemeModel(imageNameAnchor: "card01", imageNameMeme: "Anna"),
@@ -66,6 +69,7 @@ let memes: [MemeModel] = [
     MemeModel(imageNameAnchor: "card34", imageNameMeme: "Chevao"),
     MemeModel(imageNameAnchor: "card35", imageNameMeme: "Basile")
 ]
+<<<<<<< HEAD:ghostProjetc/ViewController/ARViewController.swift
 
 extension ARViewController: ARSessionDelegate {
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
@@ -102,3 +106,5 @@ extension ARViewController: ARSessionDelegate {
         }
     }
 }
+=======
+>>>>>>> main:ghostProjetc/MemesList.swift
