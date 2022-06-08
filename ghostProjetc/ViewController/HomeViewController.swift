@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func startGameAction(_ sender: Any) {
-        stopSound()
-    }
+        backgroundSound()
+        playSecondSound(file: "ieIe.mp3")    }
     
 }

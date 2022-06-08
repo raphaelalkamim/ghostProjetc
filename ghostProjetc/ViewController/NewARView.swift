@@ -43,14 +43,17 @@ class NewARView: ViewController {
     }
     
     func didFoundMemeNumb() -> String {
-        return "20"
+        var count = CheckAllMemes.shared.counter
+        return String(count)
     }
+    
 }
 
 extension NewARView: ARSessionDelegate {
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
         guard let scene = try? Experience.loadBox() else { return }
         for anchor in anchors {
+            CheckAllMemes.shared.counter += 1
             guard let imageAnchor = anchor as? ARImageAnchor,
                   let imageName = imageAnchor.name else {return}
             

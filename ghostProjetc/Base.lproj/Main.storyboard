@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--History View Controller-->
         <scene sceneID="9Wf-oW-kMy">
             <objects>
-                <viewController id="d8y-sx-arG" sceneMemberID="viewController">
+                <viewController id="d8y-sx-arG" customClass="HistoryViewController" customModule="ghostProjetc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKp-rv-wgM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,13 +20,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="SDF-jz-dUN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXTASHDASJDAHSDKJAHSDKJAHSDJKAHSJKDHASDJKHASDJKHA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-Gi-AeX">
-                                <rect key="frame" x="15" y="150" width="384" height="543"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEp-BB-KO1">
                                 <rect key="frame" x="101" y="724" width="212" height="98"/>
                                 <constraints>
@@ -41,16 +34,28 @@
                                     <segue destination="Lip-8i-PyK" kind="show" id="KgI-OZ-g4P"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DZl-lQ-OID">
+                                <rect key="frame" x="20" y="88" width="374" height="605"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cri-Hw-2yu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZEp-BB-KO1" firstAttribute="leading" secondItem="cri-Hw-2yu" secondAttribute="leading" constant="101" id="6aj-p5-Bsh"/>
                             <constraint firstItem="SDF-jz-dUN" firstAttribute="bottom" secondItem="cri-Hw-2yu" secondAttribute="bottom" constant="34" id="8PA-DZ-VL9"/>
+                            <constraint firstItem="DZl-lQ-OID" firstAttribute="top" secondItem="cri-Hw-2yu" secondAttribute="top" id="FiN-7W-Fbg"/>
+                            <constraint firstItem="cri-Hw-2yu" firstAttribute="trailing" secondItem="DZl-lQ-OID" secondAttribute="trailing" constant="20" id="JcB-QQ-fwg"/>
+                            <constraint firstItem="DZl-lQ-OID" firstAttribute="leading" secondItem="cri-Hw-2yu" secondAttribute="leading" constant="20" id="RCq-cY-2GR"/>
                             <constraint firstItem="ZEp-BB-KO1" firstAttribute="leading" secondItem="cri-Hw-2yu" secondAttribute="leading" constant="101" id="UcP-7v-uwS"/>
                             <constraint firstItem="SDF-jz-dUN" firstAttribute="trailing" secondItem="cri-Hw-2yu" secondAttribute="trailing" id="bo3-7W-DN0"/>
                             <constraint firstItem="SDF-jz-dUN" firstAttribute="leading" secondItem="cri-Hw-2yu" secondAttribute="leading" id="ehb-Dt-2z5"/>
                             <constraint firstItem="cri-Hw-2yu" firstAttribute="bottom" secondItem="ZEp-BB-KO1" secondAttribute="bottom" constant="40" id="fYs-Mv-MG0"/>
+                            <constraint firstItem="ZEp-BB-KO1" firstAttribute="top" secondItem="DZl-lQ-OID" secondAttribute="bottom" constant="31" id="mhF-Tq-JJ8"/>
                             <constraint firstItem="cri-Hw-2yu" firstAttribute="bottom" secondItem="ZEp-BB-KO1" secondAttribute="bottom" constant="40" id="oLI-XI-V20"/>
                             <constraint firstItem="cri-Hw-2yu" firstAttribute="trailing" secondItem="ZEp-BB-KO1" secondAttribute="trailing" constant="101" id="s1I-ur-U5c"/>
                             <constraint firstItem="cri-Hw-2yu" firstAttribute="trailing" secondItem="ZEp-BB-KO1" secondAttribute="trailing" constant="101" id="x5l-yc-35s"/>
@@ -60,6 +65,9 @@
                     <navigationItem key="navigationItem" id="KvF-hw-ztH">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="FvR-7e-nII"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myTextView" destination="DZl-lQ-OID" id="31t-8Y-kBj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eno-PZ-9dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,6 +206,9 @@
         <namedColor name="BordeauxColor">
             <color red="0.33333333333333331" green="0.0039215686274509803" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
