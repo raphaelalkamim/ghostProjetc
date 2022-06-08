@@ -61,6 +61,16 @@ extension NewARView: ARSessionDelegate {
                         newArView?.scene.addAnchor(entity)
                     }
                 }
+                
+                if meme.imageNameAnchor == "card01" {
+                    playSound(file: "opera.mp3")
+                }
+                else if meme.imageNameAnchor == "card02" {
+                    playSound(file: "opera.mp3")
+                }
+                else if meme.imageNameAnchor == "card23" {
+                    playSound(file: "opera.mp3")
+                }
             }
         }
     }

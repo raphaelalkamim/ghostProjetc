@@ -1,31 +1,11 @@
 //
-//  ARViewController.swift
+//  MemesList.swift
 //  ghostProjetc
 //
-//  Created by Raphael Alkamim on 06/06/22.
+//  Created by Raphael Alkamim on 08/06/22.
 //
 
 import Foundation
-import RealityKit
-import ARKit
-
-class ARViewController: ViewController {
-    
-    @IBOutlet var arView: ARView?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let configuration = ARImageTrackingConfiguration()
-        
-        if let imagesToTrack = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: Bundle.main) {
-            configuration.trackingImages = imagesToTrack
-            configuration.maximumNumberOfTrackedImages = 1
-        }
-        arView?.session.delegate = self
-        arView?.session.run(configuration)
-        
-    }
-}
 
 let memes: [MemeModel] = [
     MemeModel(imageNameAnchor: "card01", imageNameMeme: "Anna"),
@@ -64,24 +44,3 @@ let memes: [MemeModel] = [
     MemeModel(imageNameAnchor: "card34", imageNameMeme: "Chevao"),
     MemeModel(imageNameAnchor: "card35", imageNameMeme: "Basile")
 ]
-
-extension ARViewController: ARSessionDelegate {
-    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        guard let scene = try? Experience.loadBox() else { return }
-        for anchor in anchors {
-            guard let imageAnchor = anchor as? ARImageAnchor,
-                  let imageName = imageAnchor.name else {return}
-
-            for meme in memes {
-                if imageName == meme.imageNameAnchor {
-                    let entity = AnchorEntity(anchor: imageAnchor)
-
-                    if let object = scene.findEntity(named: meme.imageNameMeme) {
-                        entity.addChild(object)
-                        arView?.scene.addAnchor(entity)
-                    }
-                }
-            }
-        }
-    }
-}

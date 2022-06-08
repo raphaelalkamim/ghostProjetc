@@ -21,3 +21,7 @@ public func playSound(file: String) {
         fatalError("Couldn't load file")
     }
 }
+
+public func stopSound() {
+    soundEffect?.stop()
+}
