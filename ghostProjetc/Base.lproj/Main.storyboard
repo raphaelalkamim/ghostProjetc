@@ -126,6 +126,9 @@
                     <navigationItem key="navigationItem" id="o78-FR-eap">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="ltP-HI-lcQ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="logoView" destination="11Q-TJ-KOX" id="OfE-Js-jKk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbV-ZX-wCy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
