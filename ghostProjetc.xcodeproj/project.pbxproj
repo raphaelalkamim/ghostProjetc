@@ -12,6 +12,8 @@
 		B00370892851121500FA5B4F /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00370882851121500FA5B4F /* PlaySound.swift */; };
 		B003708B285112CC00FA5B4F /* opera.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B003708A285112CC00FA5B4F /* opera.mp3 */; };
 		B003708F2851165400FA5B4F /* MemesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003708E2851165400FA5B4F /* MemesList.swift */; };
+		B003709228511A8B00FA5B4F /* yesSir.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B003709128511A8B00FA5B4F /* yesSir.mp3 */; };
+		B003709428511AB000FA5B4F /* ieIe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B003709328511AB000FA5B4F /* ieIe.mp3 */; };
 		B09AC1B9284E99A100338043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1B8284E99A100338043 /* AppDelegate.swift */; };
 		B09AC1BB284E99A100338043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1BA284E99A100338043 /* ViewController.swift */; };
 		B09AC1BD284E99A100338043 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1BC284E99A100338043 /* Experience.rcproject */; };
@@ -28,6 +30,8 @@
 		B00370882851121500FA5B4F /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		B003708A285112CC00FA5B4F /* opera.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = opera.mp3; sourceTree = "<group>"; };
 		B003708E2851165400FA5B4F /* MemesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesList.swift; sourceTree = "<group>"; };
+		B003709128511A8B00FA5B4F /* yesSir.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yesSir.mp3; sourceTree = "<group>"; };
+		B003709328511AB000FA5B4F /* ieIe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ieIe.mp3; sourceTree = "<group>"; };
 		B09AC1B5284E99A100338043 /* ghostProjetc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ghostProjetc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09AC1B8284E99A100338043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B09AC1BA284E99A100338043 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,10 +54,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B003709028511A5200FA5B4F /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				B003709128511A8B00FA5B4F /* yesSir.mp3 */,
+				B003708A285112CC00FA5B4F /* opera.mp3 */,
+				B003709328511AB000FA5B4F /* ieIe.mp3 */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
 		B09AC1AC284E99A100338043 = {
 			isa = PBXGroup;
 			children = (
-				B003708A285112CC00FA5B4F /* opera.mp3 */,
+				B003709028511A5200FA5B4F /* Resourses */,
 				B09AC1B7284E99A100338043 /* ghostProjetc */,
 				B09AC1B6284E99A100338043 /* Products */,
 			);
@@ -152,6 +166,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B003709228511A8B00FA5B4F /* yesSir.mp3 in Resources */,
+				B003709428511AB000FA5B4F /* ieIe.mp3 in Resources */,
 				B09AC1C5284E99A300338043 /* LaunchScreen.storyboard in Resources */,
 				B09AC1C2284E99A300338043 /* Assets.xcassets in Resources */,
 				B003708B285112CC00FA5B4F /* opera.mp3 in Resources */,
