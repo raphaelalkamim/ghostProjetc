@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B0037079284FEFB100FA5B4F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0037078284FEFB100FA5B4F /* HistoryViewController.swift */; };
+		B003708728510D6400FA5B4F /* NewARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003708628510D6400FA5B4F /* NewARView.swift */; };
+		B00370892851121500FA5B4F /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00370882851121500FA5B4F /* PlaySound.swift */; };
+		B003708B285112CC00FA5B4F /* opera.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B003708A285112CC00FA5B4F /* opera.mp3 */; };
 		B09AC1B9284E99A100338043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1B8284E99A100338043 /* AppDelegate.swift */; };
 		B09AC1BB284E99A100338043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1BA284E99A100338043 /* ViewController.swift */; };
 		B09AC1BD284E99A100338043 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1BC284E99A100338043 /* Experience.rcproject */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		B0037078284FEFB100FA5B4F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		B003708628510D6400FA5B4F /* NewARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewARView.swift; sourceTree = "<group>"; };
+		B00370882851121500FA5B4F /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		B003708A285112CC00FA5B4F /* opera.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = opera.mp3; sourceTree = "<group>"; };
 		B09AC1B5284E99A100338043 /* ghostProjetc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ghostProjetc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09AC1B8284E99A100338043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B09AC1BA284E99A100338043 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 		B09AC1AC284E99A100338043 = {
 			isa = PBXGroup;
 			children = (
+				B003708A285112CC00FA5B4F /* opera.mp3 */,
 				B09AC1B7284E99A100338043 /* ghostProjetc */,
 				B09AC1B6284E99A100338043 /* Products */,
 			);
@@ -64,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				B09AC1D2284FBCFE00338043 /* MemeModel.swift */,
+				B00370882851121500FA5B4F /* PlaySound.swift */,
 				B09AC1CF284E9E6000338043 /* ViewController */,
 				B09AC1BA284E99A100338043 /* ViewController.swift */,
 				B09AC1B8284E99A100338043 /* AppDelegate.swift */,
@@ -79,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B09AC1CB284E99F300338043 /* HomeViewController.swift */,
+				B003708628510D6400FA5B4F /* NewARView.swift */,
 				B09AC1CD284E9B0C00338043 /* ARViewController.swift */,
 				B0037078284FEFB100FA5B4F /* HistoryViewController.swift */,
 			);
@@ -145,6 +154,7 @@
 			files = (
 				B09AC1C5284E99A300338043 /* LaunchScreen.storyboard in Resources */,
 				B09AC1C2284E99A300338043 /* Assets.xcassets in Resources */,
+				B003708B285112CC00FA5B4F /* opera.mp3 in Resources */,
 				B09AC1C0284E99A100338043 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,7 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B09AC1BB284E99A100338043 /* ViewController.swift in Sources */,
+				B00370892851121500FA5B4F /* PlaySound.swift in Sources */,
 				B09AC1D3284FBCFE00338043 /* MemeModel.swift in Sources */,
+				B003708728510D6400FA5B4F /* NewARView.swift in Sources */,
 				B09AC1CC284E99F300338043 /* HomeViewController.swift in Sources */,
 				B09AC1B9284E99A100338043 /* AppDelegate.swift in Sources */,
 				B09AC1BD284E99A100338043 /* Experience.rcproject in Sources */,

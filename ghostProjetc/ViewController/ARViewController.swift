@@ -11,7 +11,7 @@ import ARKit
 
 class ARViewController: ViewController {
     
-    @IBOutlet var arView: ARView!
+    @IBOutlet var arView: ARView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,8 @@ class ARViewController: ViewController {
             configuration.trackingImages = imagesToTrack
             configuration.maximumNumberOfTrackedImages = 1
         }
-        arView.session.delegate = self
-        arView.session.run(configuration)
+        arView?.session.delegate = self
+        arView?.session.run(configuration)
         
     }
 }
@@ -78,11 +78,9 @@ extension ARViewController: ARSessionDelegate {
 
                     if let object = scene.findEntity(named: meme.imageNameMeme) {
                         entity.addChild(object)
-                        arView.scene.addAnchor(entity)
+                        arView?.scene.addAnchor(entity)
                     }
-
                 }
-
             }
         }
     }

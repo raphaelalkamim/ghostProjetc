@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,14 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arView>
-                    <navigationItem key="navigationItem" id="B7T-iE-yhR"/>
+                    <navigationItem key="navigationItem" id="B7T-iE-yhR">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="xjF-5w-Mxk"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="arView" destination="8bC-Xf-vdC" id="dKV-0z-3hN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631.8840579710147" y="133.92857142857142"/>
+            <point key="canvasLocation" x="2759" y="-40"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9Wf-oW-kMy">
@@ -54,7 +57,7 @@
                                     <backgroundConfiguration key="background" image="StartButton"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="c6l-6I-bbU"/>
+                                    <segue destination="Lip-8i-PyK" kind="show" id="KgI-OZ-g4P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,7 +76,9 @@
                             <constraint firstItem="SDF-jz-dUN" firstAttribute="top" secondItem="dKp-rv-wgM" secondAttribute="top" id="zrO-Uv-QQL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KvF-hw-ztH"/>
+                    <navigationItem key="navigationItem" id="KvF-hw-ztH">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="FvR-7e-nII"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eno-PZ-9dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,6 +106,7 @@
                                     <backgroundConfiguration key="background" image="PlayButton"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="startGameAction:" destination="Ktj-KE-P9z" eventType="touchUpInside" id="5GB-7m-LCS"/>
                                     <segue destination="d8y-sx-arG" kind="show" id="4i2-lh-FTs"/>
                                 </connections>
                             </button>
@@ -128,7 +134,9 @@
                             <constraint firstItem="11Q-TJ-KOX" firstAttribute="leading" secondItem="mCJ-Ge-Mx4" secondAttribute="leading" constant="20" id="yL8-en-79R"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="o78-FR-eap"/>
+                    <navigationItem key="navigationItem" id="o78-FR-eap">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="ltP-HI-lcQ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbV-ZX-wCy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,27 +145,78 @@
         <!--Navigation Controller-->
         <scene sceneID="bYg-mz-EQE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jix-VE-GtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4L5-bO-unt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sOK-t7-tKG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="BordeauxColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="Ktj-KE-P9z" kind="relationship" relationship="rootViewController" id="d5M-Ch-7EV"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jix-VE-GtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-697.10144927536237" y="133.92857142857142"/>
         </scene>
+        <!--NewAR View-->
+        <scene sceneID="J9W-8n-zjT">
+            <objects>
+                <viewController id="Lip-8i-PyK" customClass="NewARView" customModule="ghostProjetc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IVq-Ok-Pjy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6k-dT-3YN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundARImage" translatesAutoresizingMaskIntoConstraints="NO" id="WJm-71-ZRv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1b-Yh-fNQ">
+                                <rect key="frame" x="225" y="838" width="169" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="BordeauxColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="POH-pK-f1y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="POH-pK-f1y" firstAttribute="trailing" secondItem="C1b-Yh-fNQ" secondAttribute="trailing" constant="20" id="8nk-ZT-qfF"/>
+                            <constraint firstItem="WJm-71-ZRv" firstAttribute="leading" secondItem="POH-pK-f1y" secondAttribute="leading" id="DnR-Qd-zV3"/>
+                            <constraint firstItem="H6k-dT-3YN" firstAttribute="top" secondItem="IVq-Ok-Pjy" secondAttribute="top" id="EL8-Jn-Qxf"/>
+                            <constraint firstItem="WJm-71-ZRv" firstAttribute="top" secondItem="IVq-Ok-Pjy" secondAttribute="top" id="NUj-UE-gKJ"/>
+                            <constraint firstItem="C1b-Yh-fNQ" firstAttribute="bottom" secondItem="POH-pK-f1y" secondAttribute="bottom" id="O2c-9w-nB2"/>
+                            <constraint firstItem="WJm-71-ZRv" firstAttribute="trailing" secondItem="POH-pK-f1y" secondAttribute="trailing" id="QEb-f8-2Y2"/>
+                            <constraint firstItem="H6k-dT-3YN" firstAttribute="trailing" secondItem="POH-pK-f1y" secondAttribute="trailing" id="UUm-Z6-c1i"/>
+                            <constraint firstAttribute="bottom" secondItem="WJm-71-ZRv" secondAttribute="bottom" id="ift-zc-JRn"/>
+                            <constraint firstItem="H6k-dT-3YN" firstAttribute="leading" secondItem="POH-pK-f1y" secondAttribute="leading" id="lRu-cf-hfM"/>
+                            <constraint firstAttribute="bottom" secondItem="H6k-dT-3YN" secondAttribute="bottom" id="qHC-mW-a7g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GBR-0E-gOX"/>
+                    <connections>
+                        <outlet property="countMemesDidFound" destination="C1b-Yh-fNQ" id="iAt-1p-NRG"/>
+                        <outlet property="newArView" destination="H6k-dT-3YN" id="amQ-40-kxV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vkU-bY-Yk8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682.608695652174" y="133.92857142857142"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="BackgroundARImage" width="800" height="1191"/>
         <image name="BackgroundImage" width="800" height="1191"/>
         <image name="LogoHome" width="744" height="449"/>
         <image name="PlayButton" width="362" height="362"/>
         <image name="StartButton" width="492" height="234"/>
+        <namedColor name="BordeauxColor">
+            <color red="0.33333333333333331" green="0.0039215686274509803" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
