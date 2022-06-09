@@ -13,13 +13,15 @@ class NewARView: ViewController {
     
     @IBOutlet var newArView: ARView?
     @IBOutlet var countMemesDidFound: UILabel?
-    var isPlayingSong: Bool = false
-    //var playSong: Bool = false
     
-    var totalMemes: String {
-        let value: Int = memes.count
-        return String(value)
+    var totalFoundText = "" {
+        didSet {
+            countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
+        }
     }
+
+    var isPlayingSong: Bool = false
+    var didFoundMemes: [String] = UserDefaults().array(forKey: "memesFound") as? [String] ?? []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,29 +33,27 @@ class NewARView: ViewController {
         }
         newArView?.session.delegate = self
         newArView?.session.run(configuration)
-        
-        updateCountLabel()
-        
+        countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
     }
     
-    func updateCountLabel() {
-        let memesFound: String  = didFoundMemeNumb()
-        let pistasText: String = " PISTAS"
-        countMemesDidFound?.text = memesFound + "/" + totalMemes + pistasText
-    }
-    
-    func didFoundMemeNumb() -> String {
-        var count = CheckAllMemes.shared.counter
-        return String(count)
+    func countMemesFound(nameCard: String) {
+        for i in 0..<didFoundMemes.count {
+            if nameCard == didFoundMemes[i] {
+                return
+            }
+        }
+        didFoundMemes.append(nameCard)
+        UserDefaults().set(didFoundMemes, forKey: "memesFound")
     }
     
 }
+
+
 
 extension NewARView: ARSessionDelegate {
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
         guard let scene = try? Experience.loadBox() else { return }
         for anchor in anchors {
-            CheckAllMemes.shared.counter += 1
             guard let imageAnchor = anchor as? ARImageAnchor,
                   let imageName = imageAnchor.name else {return}
             
@@ -66,10 +66,16 @@ extension NewARView: ARSessionDelegate {
                         newArView?.scene.addAnchor(entity)
                     }
                     
-                    if imageAnchor.name == "card01" {
+                    if imageAnchor.name == "card09" {
                         playSound(file: "yesSir.mp3")
-                    } else if imageAnchor.name == "card02"{
+                    } else if imageAnchor.name == "card18"{
                         playSound(file: "ieIe.mp3")
+                    } else if imageAnchor.name == "card29"{
+                        playSound(file: "ieIe.mp3")
+                    }
+                    countMemesFound(nameCard: meme.imageNameAnchor)
+                    DispatchQueue.main.async { [self] in
+                        self.countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
                     }
                 }
             }

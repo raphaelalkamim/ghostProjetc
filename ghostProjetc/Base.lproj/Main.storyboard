@@ -12,7 +12,7 @@
         <!--History View Controller-->
         <scene sceneID="9Wf-oW-kMy">
             <objects>
-                <viewController id="d8y-sx-arG" customClass="HistoryViewController" customModule="ghostProjetc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d8y-sx-arG" customClass="HistoryViewController" customModule="Fantasma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKp-rv-wgM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
         <!--Home View Controller-->
         <scene sceneID="zws-Q7-PNE">
             <objects>
-                <viewController id="Ktj-KE-P9z" customClass="HomeViewController" customModule="ghostProjetc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ktj-KE-P9z" customClass="HomeViewController" customModule="Fantasma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0kX-qP-DQK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +157,7 @@
         <!--NewAR View-->
         <scene sceneID="J9W-8n-zjT">
             <objects>
-                <viewController id="Lip-8i-PyK" customClass="NewARView" customModule="ghostProjetc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lip-8i-PyK" customClass="NewARView" customModule="Fantasma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IVq-Ok-Pjy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,6 +174,15 @@
                                 <color key="textColor" name="BordeauxColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTN-GM-Hgp">
+                                <rect key="frame" x="327" y="752" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="qBL-lR-hui" kind="show" id="EJM-6K-skP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="POH-pK-f1y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -199,6 +208,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkU-bY-Yk8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1682.608695652174" y="133.92857142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SHu-0E-uwP">
+            <objects>
+                <viewController id="qBL-lR-hui" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Th5-D2-Zbq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIU-lV-Ebv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KiF-YJ-JNk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YIU-lV-Ebv" firstAttribute="top" secondItem="Th5-D2-Zbq" secondAttribute="top" id="jat-fs-szo"/>
+                            <constraint firstItem="YIU-lV-Ebv" firstAttribute="trailing" secondItem="KiF-YJ-JNk" secondAttribute="trailing" id="lAW-93-aH4"/>
+                            <constraint firstItem="YIU-lV-Ebv" firstAttribute="leading" secondItem="KiF-YJ-JNk" secondAttribute="leading" id="psb-zi-h0m"/>
+                            <constraint firstAttribute="bottom" secondItem="YIU-lV-Ebv" secondAttribute="bottom" id="xup-eW-dHl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z24-BX-Q0k">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="XQy-Ye-aJB"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJT-Dt-uSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476.811594202899" y="133.92857142857142"/>
         </scene>
     </scenes>
     <resources>
