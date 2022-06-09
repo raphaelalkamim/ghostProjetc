@@ -25,10 +25,12 @@ public func playSound(file: String) {
 
 public func stopSound() {
     FirstsoundEffect?.stop()
+    SecondsoundEffect?.stop()
 }
 
 public func backgroundSound() {
-    FirstsoundEffect?.setVolume(0.25, fadeDuration: .zero)
+    FirstsoundEffect?.setVolume(0.1, fadeDuration: .zero)
+    SecondsoundEffect?.setVolume(1, fadeDuration: .zero)
 }
 
 public func playSecondSound(file: String) {

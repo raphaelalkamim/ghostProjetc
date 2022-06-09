@@ -31,6 +31,7 @@
                                     <backgroundConfiguration key="background" image="StartButton"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="StartAR:" destination="d8y-sx-arG" eventType="touchUpInside" id="6U2-gu-lbn"/>
                                     <segue destination="Lip-8i-PyK" kind="show" id="KgI-OZ-g4P"/>
                                 </connections>
                             </button>

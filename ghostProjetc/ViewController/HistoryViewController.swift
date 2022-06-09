@@ -26,5 +26,8 @@ class HistoryViewController: ViewController {
         
     }
 
+    @IBAction func StartAR(_ sender: Any) {
+        stopSound()
+    }
     
 }
