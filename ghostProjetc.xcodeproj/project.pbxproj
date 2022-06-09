@@ -16,6 +16,9 @@
 		B003709428511AB000FA5B4F /* ieIe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B003709328511AB000FA5B4F /* ieIe.mp3 */; };
 		B003709628525DDD00FA5B4F /* fantasma_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B003709528525DDD00FA5B4F /* fantasma_audio.mp3 */; };
 		B00370982852745500FA5B4F /* GK.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B00370972852745500FA5B4F /* GK.mp3 */; };
+		B00370A22852910D00FA5B4F /* FaceGhostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003709F2852910D00FA5B4F /* FaceGhostView.swift */; };
+		B00370A32852910D00FA5B4F /* ImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00370A02852910D00FA5B4F /* ImageNode.swift */; };
+		B00370A42852910D00FA5B4F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00370A12852910D00FA5B4F /* StringExtension.swift */; };
 		B09AC1B9284E99A100338043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1B8284E99A100338043 /* AppDelegate.swift */; };
 		B09AC1BB284E99A100338043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1BA284E99A100338043 /* ViewController.swift */; };
 		B09AC1BD284E99A100338043 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B09AC1BC284E99A100338043 /* Experience.rcproject */; };
@@ -36,6 +39,9 @@
 		B003709328511AB000FA5B4F /* ieIe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ieIe.mp3; sourceTree = "<group>"; };
 		B003709528525DDD00FA5B4F /* fantasma_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fantasma_audio.mp3; sourceTree = "<group>"; };
 		B00370972852745500FA5B4F /* GK.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GK.mp3; sourceTree = "<group>"; };
+		B003709F2852910D00FA5B4F /* FaceGhostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGhostView.swift; sourceTree = "<group>"; };
+		B00370A02852910D00FA5B4F /* ImageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNode.swift; sourceTree = "<group>"; };
+		B00370A12852910D00FA5B4F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B09AC1B5284E99A100338043 /* Fantasma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fantasma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09AC1B8284E99A100338043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B09AC1BA284E99A100338043 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 		B09AC1B7284E99A100338043 /* ghostProjetc */ = {
 			isa = PBXGroup;
 			children = (
+				B00370A02852910D00FA5B4F /* ImageNode.swift */,
+				B00370A12852910D00FA5B4F /* StringExtension.swift */,
 				B09AC1D2284FBCFE00338043 /* MemeModel.swift */,
 				B003708E2851165400FA5B4F /* MemesList.swift */,
 				B00370882851121500FA5B4F /* PlaySound.swift */,
@@ -110,6 +118,7 @@
 				B09AC1CB284E99F300338043 /* HomeViewController.swift */,
 				B003708628510D6400FA5B4F /* NewARView.swift */,
 				B0037078284FEFB100FA5B4F /* HistoryViewController.swift */,
+				B003709F2852910D00FA5B4F /* FaceGhostView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -197,6 +206,9 @@
 				B09AC1CC284E99F300338043 /* HomeViewController.swift in Sources */,
 				B003708F2851165400FA5B4F /* MemesList.swift in Sources */,
 				B09AC1B9284E99A100338043 /* AppDelegate.swift in Sources */,
+				B00370A22852910D00FA5B4F /* FaceGhostView.swift in Sources */,
+				B00370A42852910D00FA5B4F /* StringExtension.swift in Sources */,
+				B00370A32852910D00FA5B4F /* ImageNode.swift in Sources */,
 				B09AC1BD284E99A100338043 /* Experience.rcproject in Sources */,
 				B0037079284FEFB100FA5B4F /* HistoryViewController.swift in Sources */,
 			);

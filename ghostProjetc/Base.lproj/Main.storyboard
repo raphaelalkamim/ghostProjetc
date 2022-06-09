@@ -162,7 +162,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6k-dT-3YN">
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" enableRayTracedShadows="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6k-dT-3YN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundARImage" translatesAutoresizingMaskIntoConstraints="NO" id="WJm-71-ZRv">
@@ -180,7 +180,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="qBL-lR-hui" kind="show" id="EJM-6K-skP"/>
+                                    <segue destination="jVC-ff-gqE" kind="show" id="6hI-vz-zw7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -209,34 +209,32 @@
             </objects>
             <point key="canvasLocation" x="1682.608695652174" y="133.92857142857142"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="SHu-0E-uwP">
+        <!--Face Ghost View-->
+        <scene sceneID="s4t-xz-lhS">
             <objects>
-                <viewController id="qBL-lR-hui" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Th5-D2-Zbq">
+                <viewController id="jVC-ff-gqE" customClass="FaceGhostView" customModule="Fantasma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A6Z-ja-5Vd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIU-lV-Ebv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-Fx-Wq7">
+                                <rect key="frame" x="-1" y="0.0" width="415" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="KiF-YJ-JNk"/>
+                        <viewLayoutGuide key="safeArea" id="xau-Zg-8pD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="YIU-lV-Ebv" firstAttribute="top" secondItem="Th5-D2-Zbq" secondAttribute="top" id="jat-fs-szo"/>
-                            <constraint firstItem="YIU-lV-Ebv" firstAttribute="trailing" secondItem="KiF-YJ-JNk" secondAttribute="trailing" id="lAW-93-aH4"/>
-                            <constraint firstItem="YIU-lV-Ebv" firstAttribute="leading" secondItem="KiF-YJ-JNk" secondAttribute="leading" id="psb-zi-h0m"/>
-                            <constraint firstAttribute="bottom" secondItem="YIU-lV-Ebv" secondAttribute="bottom" id="xup-eW-dHl"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="z24-BX-Q0k">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="XQy-Ye-aJB"/>
+                    <navigationItem key="navigationItem" id="FVe-5t-JPX">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="aIA-0A-pLz"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sceneView" destination="4Ow-Fx-Wq7" id="WwB-hC-8RR"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JJT-Dt-uSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3R-M4-Bea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2476.811594202899" y="133.92857142857142"/>
+            <point key="canvasLocation" x="2430.434782608696" y="133.92857142857142"/>
         </scene>
     </scenes>
     <resources>
