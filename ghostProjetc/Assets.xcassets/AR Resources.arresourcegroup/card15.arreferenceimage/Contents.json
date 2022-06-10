@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "IMG_9241.png",
+      "filename" : "card15.png",
       "idiom" : "universal"
     }
   ],
@@ -11,6 +11,6 @@
   },
   "properties" : {
     "unit" : "centimeters",
-    "width" : 3
+    "width" : 10
   }
 }
