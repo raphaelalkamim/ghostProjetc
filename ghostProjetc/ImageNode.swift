@@ -23,6 +23,7 @@ class ImageNode: SCNNode {
     plane.firstMaterial?.isDoubleSided = true
     
     geometry = plane
+      
   }
   
   required init?(coder aDecoder: NSCoder) {

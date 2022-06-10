@@ -12,7 +12,8 @@ import ARKit
 class NewARView: ViewController {
     
     @IBOutlet var newArView: ARView?
-    @IBOutlet var countMemesDidFound: UILabel?
+    @IBOutlet weak var countMemesDidFound: UILabel?
+    @IBOutlet weak var ghostButton: UIButton!
     
     var totalFoundText = "" {
         didSet {
@@ -31,9 +32,15 @@ class NewARView: ViewController {
             configuration.trackingImages = imagesToTrack
             configuration.maximumNumberOfTrackedImages = 1
         }
+        
         newArView?.session.delegate = self
         newArView?.session.run(configuration)
+        
         countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
+        ghostButton.isHidden = true
+        if didFoundMemes.count >= 30 {
+            ghostButton.isHidden = false
+        }
     }
     
     func countMemesFound(nameCard: String) {
@@ -76,6 +83,9 @@ extension NewARView: ARSessionDelegate {
                     countMemesFound(nameCard: meme.imageNameAnchor)
                     DispatchQueue.main.async { [self] in
                         self.countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
+                        if didFoundMemes.count >= 30 {
+                            ghostButton.isHidden = false
+                        }
                     }
                 }
             }

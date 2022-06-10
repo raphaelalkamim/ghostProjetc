@@ -58,6 +58,7 @@ extension FaceGhostView: ARSCNViewDelegate {
         let testa = ImageNode(with: ghostOption)
         testa.name = "testa"
         testa.rotation = SCNVector4(0, 5, 0, GLKMathDegreesToRadians(180.0))
+        testa.position = SCNVector3(x: 0.0, y: 0.1, z: 0.0)
         node.addChildNode(testa)
         
         return node
