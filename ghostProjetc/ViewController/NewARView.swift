@@ -83,7 +83,7 @@ extension NewARView: ARSessionDelegate {
                     countMemesFound(nameCard: meme.imageNameAnchor)
                     DispatchQueue.main.async { [self] in
                         self.countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
-                        if didFoundMemes.count >= 30 {
+                        if didFoundMemes.count >= 35 {
                             ghostButton.isHidden = false
                         }
                     }
