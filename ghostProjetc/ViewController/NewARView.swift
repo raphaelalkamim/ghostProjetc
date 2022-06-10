@@ -12,12 +12,17 @@ import ARKit
 class NewARView: ViewController {
     
     @IBOutlet var newArView: ARView?
-    @IBOutlet var countMemesDidFound: UILabel?
+    @IBOutlet weak var countMemesDidFound: UILabel?
+    @IBOutlet weak var ghostButton: UIButton!
     
-    var totalMemes: String {
-        let value: Int = memes.count
-        return String(value)
+    var totalFoundText = "" {
+        didSet {
+            countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
+        }
     }
+
+    var isPlayingSong: Bool = false
+    var didFoundMemes: [String] = UserDefaults().array(forKey: "memesFound") as? [String] ?? []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,23 +32,30 @@ class NewARView: ViewController {
             configuration.trackingImages = imagesToTrack
             configuration.maximumNumberOfTrackedImages = 1
         }
+        
         newArView?.session.delegate = self
         newArView?.session.run(configuration)
         
-        updateCountLabel()
-        
+        countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
+        ghostButton.isHidden = true
+        if didFoundMemes.count >= 30 {
+            ghostButton.isHidden = false
+        }
     }
     
-    func updateCountLabel() {
-        let memesFound: String  = didFoundMemeNumb()
-        let pistasText: String = " PISTAS"
-        countMemesDidFound?.text = memesFound + "/" + totalMemes + pistasText
+    func countMemesFound(nameCard: String) {
+        for i in 0..<didFoundMemes.count {
+            if nameCard == didFoundMemes[i] {
+                return
+            }
+        }
+        didFoundMemes.append(nameCard)
+        UserDefaults().set(didFoundMemes, forKey: "memesFound")
     }
     
-    func didFoundMemeNumb() -> String {
-        return "20"
-    }
 }
+
+
 
 extension NewARView: ARSessionDelegate {
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
@@ -51,27 +63,47 @@ extension NewARView: ARSessionDelegate {
         for anchor in anchors {
             guard let imageAnchor = anchor as? ARImageAnchor,
                   let imageName = imageAnchor.name else {return}
-
+            
             for meme in memes {
                 if imageName == meme.imageNameAnchor {
                     let entity = AnchorEntity(anchor: imageAnchor)
-
+                    
                     if let object = scene.findEntity(named: meme.imageNameMeme) {
                         entity.addChild(object)
                         newArView?.scene.addAnchor(entity)
                     }
-                }
-                
-                if meme.imageNameAnchor == "card01" {
-                    playSound(file: "opera.mp3")
-                }
-                else if meme.imageNameAnchor == "card02" {
-                    playSound(file: "opera.mp3")
-                }
-                else if meme.imageNameAnchor == "card23" {
-                    playSound(file: "opera.mp3")
+                    
+                    if imageAnchor.name == "card09" {
+                        playSound(file: "yesSir.mp3")
+                    } else if imageAnchor.name == "card18"{
+                        playSound(file: "ieIe.mp3")
+                    } else if imageAnchor.name == "card29"{
+                        playSound(file: "ieIe.mp3")
+                    }
+                    countMemesFound(nameCard: meme.imageNameAnchor)
+                    DispatchQueue.main.async { [self] in
+                        self.countMemesDidFound?.text = " PISTAS \(didFoundMemes.count) / \(memes.count)"
+                        if didFoundMemes.count >= 30 {
+                            ghostButton.isHidden = false
+                        }
+                    }
                 }
             }
         }
     }
+    
+    func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+        for anchor in anchors {
+            guard let imageAnchor = anchor as? ARImageAnchor else {return}
+            if !imageAnchor.isTracked {
+                newArView?.session.remove(anchor: imageAnchor)
+            }
+        }
+    }
+    
+    func session(_ session: ARSession, didRemove anchors: [ARAnchor]) {
+        stopSound()
+    }
+    
 }
+

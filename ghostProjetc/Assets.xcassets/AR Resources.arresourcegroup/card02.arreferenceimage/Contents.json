@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "anchor02.png",
+      "filename" : "IMG_1736.png",
       "idiom" : "universal"
     }
   ],
@@ -11,6 +11,6 @@
   },
   "properties" : {
     "unit" : "centimeters",
-    "width" : 7
+    "width" : 15
   }
 }

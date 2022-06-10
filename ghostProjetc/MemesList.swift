@@ -7,6 +7,18 @@
 
 import Foundation
 
+class CheckAllMemes {
+    static var shared: CheckAllMemes = {
+        return CheckAllMemes()
+    }()
+    
+    var counter: Int
+    
+    private init() {
+        counter = 0
+    }
+}
+
 let memes: [MemeModel] = [
     MemeModel(imageNameAnchor: "card01", imageNameMeme: "Anna"),
     MemeModel(imageNameAnchor: "card02", imageNameMeme: "Triz"),
