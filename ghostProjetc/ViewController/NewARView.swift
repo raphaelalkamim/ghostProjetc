@@ -78,7 +78,7 @@ extension NewARView: ARSessionDelegate {
                     } else if imageAnchor.name == "card18"{
                         playSound(file: "ieIe.mp3")
                     } else if imageAnchor.name == "card29"{
-                        playSound(file: "ieIe.mp3")
+                        playSound(file: "GK.mp3")
                     }
                     countMemesFound(nameCard: meme.imageNameAnchor)
                     DispatchQueue.main.async { [self] in
